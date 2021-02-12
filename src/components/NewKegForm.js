@@ -4,11 +4,11 @@ import { v4 } from 'uuid';
 import PropTypes from 'prop-types';
 import ReusableForm from './ReusableForm';
 
-function NewKegForm() {
+function NewKegForm(props) {
 
   function handleNewKegFormSubmission(event){
     event.preventDefault();
-    PropTypes.onNewKegCreation({
+    props.onNewKegCreation({
       name: event.target.name.value,
       brand: event.target.brand.value,
       alcoholContent: event.target.brand.value,

@@ -5,7 +5,7 @@ function Keg(props){
   return(
     <>
       <div className="card">
-        <h2 className="card-title display-3">{props.name} - <span className="text-secondar">{props.brand}</span></h2>
+        <h2 className="card-title display-3">{props.name} <span className="text-secondary">{props.brand}</span></h2>
         <p className="display-4">Available Pints: {props.quantity}</p>
       </div>
     </>
@@ -21,3 +21,5 @@ Keg.propTypes = {
   description: PropTypes.string,
   quantity: PropTypes.number.isRequired
 }
+
+export default Keg;
