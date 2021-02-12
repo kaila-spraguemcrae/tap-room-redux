@@ -34,7 +34,6 @@ This project uses the following technologies:
 - git/GitHub
 - VS Code
 
-
 -------------------
 
 ## User Stories
@@ -51,6 +50,12 @@ This project uses the following technologies:
 | 08 | I want a keg to update to say "Out of Stock" once it's empty. | ❌ |
 | 09 | I want kegs with less than 10 pints to include a message that says "Almost Empty" so I can try a pint before it's gone! | ❌ |
 | 10 | I want to have kegs prices to be color-coded for easy readability. This could be based on their price, the style of beer or kombucha, or the amount of pints left. | ❌ |
+ 
+-------------------
+
+## Component Tree
+
+![Component Tree for tap-room project](./readmeAssets/img/component-tree.png)
 
 -------------------
 
@@ -69,26 +74,43 @@ This project uses the following technologies:
 
 #### To run this project locally you will need:
 
-- **ASP .NET Core :** You can check if you have .NET Core by running `dotnet --version` in the command line. If you do not have .NET Core please find more information and download [here](https://dotnet.microsoft.com/download/dotnet-core)
-- **MySQL :**  You can download MySQL [here](https://dev.mysql.com/downloads/file/?id=484914) and MySQL Workbench [here](https://dev.mysql.com/downloads/file/?id=484391)
+- **Node.js :** You can check if you have Node.js by running `node -v` in the command line. If you do not have Node.js please find more information and download [here](https://nodejs.org/en/)
+* you can also install node through Homebrew by running `brew install node` in the command line.
 - **Prefered Code Editor**
-
 
 ### ⚙️ Clone or Download
 
 #### To Download:
 
-Go to my GitHub repository here, [https://guthub.com/kaila.spraguemcrae/AnimalShelter.Solution](https://guthub.com/kaila.spraguemcrae/AnimalShelter.Solution), and click on the green 'Code' button to clone the repository, Open with GitHub Desktop OR Download the ZIP file
+Go to my GitHub repository here, [https://guthub.com/kaila.spraguemcrae/tap-room](https://guthub.com/kaila.spraguemcrae/tap-room), and click on the green 'Code' button to clone the repository, Open with GitHub Desktop OR Download the ZIP file
 
 #### To clone (my prefered method):
 
 1. Push the green 'Clone' button and copy the URL.
-2. Open Terminal or GitBash and input the command: `git clone https://github.com/kaila-spraguemcrae/AnimalShelter.Solution`
+2. Open Terminal or GitBash and input the command: `git clone https://github.com/kaila-spraguemcrae/tap-room`
 3. To view the code, open the copied directory with Visual Studio Code or your preferred text editor by inputing the command `code .` in your terminal.
 
 ### 🧰  Setup Options
 
+#### `npm install` 
 
+This insures you have all of the necessary files to run the program.
+
+#### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+#### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
 --------------------------
 
@@ -96,7 +118,6 @@ Go to my GitHub repository here, [https://guthub.com/kaila.spraguemcrae/AnimalSh
 
 If you run into any problems or have any questions please contact me:
 - [Kaila Sprague McRae](mailto:kaila.sprague@icloud.com)
-
 
 ---------------------------
 
@@ -127,65 +148,12 @@ Copyright (c) 2020 Kaila Sprague McRae
 
 
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
 ### Deployment
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
