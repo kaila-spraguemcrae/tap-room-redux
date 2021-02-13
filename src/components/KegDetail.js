@@ -27,15 +27,15 @@ function KegDetail(props){
           <p>Price: ${keg.price}</p>
           <p>Flavor: {keg.flavor}</p>
           <p>Description: {keg.description}</p>
+          <hr />
+          <p><span className="fs-5">Current Stock: </span>{stockMessage}</p>
         </div>
         <div className="card-footer">
-          <p><span className="fs-5">Current Stock: </span>{stockMessage}</p>
+          
           <div className="row">
-            <button className="btn btn-secondary m-1" hidden={keg.quantity===0} onClick={()=> onClickingBuy(keg.id)}>Buy</button>
-          </div>
+            <button className="btn btn-secondary col m-1" hidden={keg.quantity===0} onClick={()=> onClickingBuy(keg.id)}>Buy</button>
 
-          <div className="row">
-            <input className="col m-1" ref={numberInput} type='number' name='restock' placeholder='restock quantity'/>
+            <input className="col m-1 ms-5" ref={numberInput} type='number' name='restock' placeholder='restock quantity'/>
             <button className="btn btn-secondary m-1 col" onClick={()=> onClickingRestock(keg.id, numberInput.current.value)}>Restock</button>
           </div>
 
