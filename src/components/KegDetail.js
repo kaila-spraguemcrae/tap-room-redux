@@ -6,10 +6,10 @@ function KegDetail(props){
   let { stockMessage } = props;
   let numberInput = React.createRef();
 
-  if(keg.quantity === 0) {
+  if(keg.quantity <= 0) {
     stockMessage = "Currently Out of Stock.";
   } else if (keg.quantity <= 10) {
-    stockMessage = "*Low Stock*" + keg.quantity + " pints";
+    stockMessage = "*Low Stock* " + keg.quantity + " pints";
   } else {
     stockMessage = keg.quantity + " pints";
   }
