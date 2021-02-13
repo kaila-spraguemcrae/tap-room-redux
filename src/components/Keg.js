@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 function Keg(props){
   return(
     <>
-      <div className="card" onClick= {() => props.whenKegClicked(props.id)}>
-        <h2 className="card-title display-3">{props.name} <span className="text-secondary">{props.brand}</span></h2>
-        <p className="display-4">Available Pints: {props.quantity}</p>
+      <div className="card mb-3 px-3" id="keg-list-item" onClick= {() => props.whenKegClicked(props.id)}>
+        <h2 className="card-title display-3">{props.name} <span className="text-secondary display-4">{props.brand}</span></h2>
+        <p className="fs-5">Available Pints: {props.quantity}</p>
       </div>
     </>
   );

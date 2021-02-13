@@ -8,7 +8,7 @@ function App() {
     <>
       <Header /> 
       <div className="container">
-        <div className="card col-md-8 offset-md-2 p-3">
+        <div className="card col-lg-6 offset-lg-3 p-3 mt-3">
           <KegControl />
         </div>
       </div>
