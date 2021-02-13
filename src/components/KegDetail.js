@@ -40,7 +40,7 @@ function KegDetail(props){
           </div>
 
           <div className="row">
-            <button className="btn btn-secondary m-1" onClick={()=> onClickingDelete(keg.id)}>Delete keg</button>
+            <button className="btn btn-secondary m-1" onClick={()=> onClickingDelete(keg.id)}>Delete Keg</button>
           </div>
         </div>
       </div>
