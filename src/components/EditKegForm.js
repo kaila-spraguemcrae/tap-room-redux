@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import ReusableForm from "./ReusableForm";
 
 function EditKegForm (props) {
   const { keg } = props;
@@ -14,7 +15,8 @@ function EditKegForm (props) {
       flavor: event.target.flavor.value,
       description: event.target.description.value,
       quantity: event.target.quantity.value,
-      id: keg.id})
+      id: keg.id
+    });
   }
   return(
     <>
