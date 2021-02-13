@@ -40,15 +40,15 @@ This project uses the following technologies:
 
 | obj# | User Stories | Complete |
 | :------------- | :------------- | :------------- |
-| 01 | I want to see a list/menu of all available kegs. | ❌ |
-| 02 | I want to submit a form to add a new keg to a list. | ❌ |
-| 03 | I want to be able to click on a keg to see its detail page. | ❌ |
-| 04 | I want to see how many pints are left in a keg. | ❌ |
-| 05 | I want to be able to click a button next to a keg whenever I sell a pint of it. This should decrease the number of pints left by 1. Pints should not be able to go below 0. | ❌ |
+| 01 | I want to see a list/menu of all available kegs. | ✅ |
+| 02 | I want to submit a form to add a new keg to a list. | ✅ |
+| 03 | I want to be able to click on a keg to see its detail page. | ✅ |
+| 04 | I want to see how many pints are left in a keg. | ✅ |
+| 05 | I want to be able to click a button next to a keg whenever I sell a pint of it. This should decrease the number of pints left by 1. Pints should not be able to go below 0. | ✅ |
 | 06 | I want the option to edit a keg's properties after entering them just in case I make a mistake. | ❌ |
 | 07 | I want to be able to delete a keg. | ❌ |
-| 08 | I want a keg to update to say "Out of Stock" once it's empty. | ❌ |
-| 09 | I want kegs with less than 10 pints to include a message that says "Almost Empty" so I can try a pint before it's gone! | ❌ |
+| 08 | I want a keg to update to say "Out of Stock" once it's empty. | ✅ |
+| 09 | I want kegs with less than 10 pints to include a message that says "Almost Empty" so I can try a pint before it's gone! | ✅ |
 | 10 | I want to have kegs prices to be color-coded for easy readability. This could be based on their price, the style of beer or kombucha, or the amount of pints left. | ❌ |
  
 -------------------
