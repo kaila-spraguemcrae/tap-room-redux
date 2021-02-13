@@ -16,8 +16,8 @@ function KegDetail(props){
 
   return (
     <>
-      <h1 className="display-3">Product Details</h1>
-      <div className="card">
+      <h1 className="display-3 ps-1">Product Details</h1>
+      <div className="card mb-3">
         <div className="card-header">
           <h2>{keg.name}</h2>
         </div>
@@ -29,13 +29,19 @@ function KegDetail(props){
           <p>Description: {keg.description}</p>
         </div>
         <div className="card-footer">
-          <p>{stockMessage}</p>
-          <button hidden={keg.quantity===0} onClick={()=> onClickingBuy(keg.id)}>Buy</button>
-    
-            <input ref={numberInput} type='number' name='restock' placeholder='restock quantity'/>
-            <button onClick={()=> onClickingRestock(keg.id, numberInput.current.value)}>Restock</button>
+          <p><span className="fs-5">Current Stock: </span>{stockMessage}</p>
+          <div className="row">
+            <button className="btn btn-secondary m-1" hidden={keg.quantity===0} onClick={()=> onClickingBuy(keg.id)}>Buy</button>
+          </div>
 
-          <button onClick={()=> onClickingDelete(keg.id)}>Delete keg</button>
+          <div className="row">
+            <input className="col m-1" ref={numberInput} type='number' name='restock' placeholder='restock quantity'/>
+            <button className="btn btn-secondary m-1 col" onClick={()=> onClickingRestock(keg.id, numberInput.current.value)}>Restock</button>
+          </div>
+
+          <div className="row">
+            <button className="btn btn-secondary m-1" onClick={()=> onClickingDelete(keg.id)}>Delete keg</button>
+          </div>
         </div>
       </div>
     </>
