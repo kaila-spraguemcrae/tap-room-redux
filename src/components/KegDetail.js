@@ -40,7 +40,11 @@ function KegDetail(props){
           </div>
 
           <div className="row">
-            <button className="btn btn-secondary m-1" onClick={()=> onClickingDelete(keg.id)}>Delete Keg</button>
+            <button className="btn btn-secondary col m-1" onClick={ props.onClickingEdit() }>Edit Keg</button>
+          </div>
+
+          <div className="row">
+            <button className="btn btn-secondary col m-1" onClick={()=> onClickingDelete(keg.id)}>Delete Keg</button>
           </div>
         </div>
       </div>
@@ -52,7 +56,8 @@ KegDetail.propTypes = {
   keg: PropTypes.object,
   onClickingDelete: PropTypes.func,
   onClickingBuy: PropTypes.func,
-  onClickingRestock: PropTypes.func
+  onClickingRestock: PropTypes.func,
+  onClickingEdit: PropTypes.func
 }
 
 export default KegDetail;
