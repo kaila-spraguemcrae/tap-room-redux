@@ -1,6 +1,6 @@
 <br>
 <h1 align = "center">
-  <b> Kombucha Tap Room </b>
+  <b>Tap Room </b>
 </h1>
 
 <p align = "center">
@@ -63,8 +63,7 @@ This project uses the following technologies:
 
 | Date | Error | Handled | Solution |
 | :------------- | :------------- | :------------- | :------------- |
-|  |  | |  |
-|  |   | |  |
+| no known bugs at this time |  | |  |
 
 -------------------
 
