@@ -46,7 +46,7 @@ This project uses the following technologies:
 | 04 | I want to see how many pints are left in a keg. | ✅ |
 | 05 | I want to be able to click a button next to a keg whenever I sell a pint of it. This should decrease the number of pints left by 1. Pints should not be able to go below 0. | ✅ |
 | 06 | I want the option to edit a keg's properties after entering them just in case I make a mistake. | ❌ |
-| 07 | I want to be able to delete a keg. | ❌ |
+| 07 | I want to be able to delete a keg. | ✅ |
 | 08 | I want a keg to update to say "Out of Stock" once it's empty. | ✅ |
 | 09 | I want kegs with less than 10 pints to include a message that says "Almost Empty" so I can try a pint before it's gone! | ✅ |
 | 10 | I want to have kegs prices to be color-coded for easy readability. This could be based on their price, the style of beer or kombucha, or the amount of pints left. | ❌ |
@@ -63,7 +63,7 @@ This project uses the following technologies:
 
 | Date | Error | Handled | Solution |
 | :------------- | :------------- | :------------- | :------------- |
-| no known bugs at this time |  | |  |
+| 02.12.2021 | cannot read propert 'id' of undefined | ❌ |  |
 
 -------------------
 
