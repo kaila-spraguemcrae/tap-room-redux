@@ -48,7 +48,6 @@ class KegControl extends React.Component {
       ...keg,
         quantity: keg.id === id ? keg.quantity -1 : keg.quantity
     }))
-    const selectedKeg = this.state.masterKegList.filter(keg => keg.id === id)[0];
     this.setState({
       masterKegList: newMasterKegList,
       selectedKeg: null
@@ -78,8 +77,8 @@ class KegControl extends React.Component {
     this.setState({ editing: true });
   }
 
-  handleEditingKegInList = (KegToEdit) => {
-    const editedMasterKegList = this.state.masterKegList.filter(keg => keg.id !== this.state.selectedKeg.ed).concat(KegToEdit);
+  handleEditingKegInList = (kegToEdit) => {
+    const editedMasterKegList = this.state.masterKegList.filter(keg => keg.id !== this.state.selectedKeg.id).concat(kegToEdit);
     this.setState({
       masterKegList: editedMasterKegList,
       editing:false,
