@@ -40,7 +40,7 @@ function KegDetail(props){
           </div>
 
           <div className="row">
-            <button className="btn btn-secondary col m-1" onClick={ props.onClickingEdit() }>Edit Keg</button>
+            <button className="btn btn-secondary col m-1" onClick={() => props.onClickingEdit(keg.id) }>Edit Keg</button>
           </div>
 
           <div className="row">
