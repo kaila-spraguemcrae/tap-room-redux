@@ -92,7 +92,7 @@ class KegControl extends React.Component {
     if(this.state.editing){
       currentlyVisibleState = 
       <EditKegForm
-        ticket = {this.state.selectedKeg}
+        keg = {this.state.selectedKeg}
         onEditKeg = {this.handleEditingKegInList} />
       buttonText="Return to List";
       console.log(this.state)
