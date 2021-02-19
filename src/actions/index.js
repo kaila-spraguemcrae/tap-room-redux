@@ -24,3 +24,7 @@ export const toggleForm = () => ({
   type: c.TOGGLE_FORM
 });
 
+export const selectKeg = (keg) => ({
+  type: c.SELECT_KEG,
+  keg
+});

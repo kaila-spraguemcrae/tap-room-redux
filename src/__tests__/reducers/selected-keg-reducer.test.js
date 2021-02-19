@@ -2,6 +2,7 @@ import selectedKegReducer from '../../reducers/selected-keg-reducer';
 import * as a from '../../actions/index';
 
 describe('selectedKegReducer', () => {
+
   let action;
 
   const keg = {
@@ -19,7 +20,8 @@ describe('selectedKegReducer', () => {
     expect(selectedKegReducer({}, {type: null})).toEqual({});
   });
 
-  test('Should return selected keg when SELECTED_KEG is called', () => {
+  test('Should return selected keg when SELECT_KEG is called', () => {
+    const action = a.selectKeg(keg);
     expect(selectedKegReducer({}, action)).toEqual(keg);
   });
 });
