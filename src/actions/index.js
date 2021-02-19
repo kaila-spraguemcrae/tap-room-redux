@@ -23,3 +23,4 @@ export const deleteKeg = (id) => ({
 export const toggleForm = () => ({
   type: c.TOGGLE_FORM
 });
+
