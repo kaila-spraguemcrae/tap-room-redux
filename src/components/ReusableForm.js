@@ -38,7 +38,6 @@ function ReusableForm(props) {
             <button type="submit" className="btn btn-secondary">{props.buttonText}</button>
           </div>
         </form>
-
     </>
   );
 }

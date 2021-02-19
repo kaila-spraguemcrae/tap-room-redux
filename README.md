@@ -65,6 +65,7 @@ This project uses the following technologies:
 | Date | Error | Handled | Solution |
 | :------------- | :------------- | :------------- | :------------- |
 | 02.12.2021 | cannot read propert 'id' of undefined | ✅ | typo in KegControl |
+| 02.19.2021 | Invalid DOM property 'for' | ✅ | changed 'for' to 'htmlFor' in ReusableForm |
 
 -------------------
 
