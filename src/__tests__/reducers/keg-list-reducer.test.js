@@ -15,6 +15,29 @@ describe('kegListReducer', () => {
     id: 1
   }
 
+  const currentState = {
+    1: {
+      name: "test",
+      brand: "test",
+      alcoholContent: "test",
+      price: "test",
+      flavor: "test",
+      description: "test",
+      quantity: 24,
+      id: 1
+    },
+    2: {
+      name: "test2",
+      brand: "test2",
+      alcoholContent: "test2",
+      price: "test2",
+      flavor: "test2",
+      description: "test2",
+      quantity: 24,
+      id: 2
+    }
+  }
+
   test('Should return default dtate if there is not action type passed to the reducer', ()=> {
     expect(kegListReducer({}, {type:null})).toEqual({});
   });
@@ -44,5 +67,24 @@ describe('kegListReducer', () => {
         id
       }
     });
+  });
+
+  test('Should delete a keg', ()=>{
+    action = {
+      type: 'DELETE_KEG',
+      id: 1
+    };
+    expect(kegListReducer(currentState,action)).toEqual({
+      2: {
+        name: "test2",
+        brand: "test2",
+        alcoholContent: "test2",
+        price: "test2",
+        flavor: "test2",
+        description: "test2",
+        quantity: 24,
+        id: 2
+      }
+    })
   });
 });
