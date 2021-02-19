@@ -1,4 +1,5 @@
 import formVisibleReducer from '../../reducers/form-visible-reducer';
+import * as a from '../../actions/index';
 
 describe ('formVisibleReducer', ()=> {
 
@@ -7,6 +8,6 @@ describe ('formVisibleReducer', ()=> {
   });
 
   test('Should return true if toggle action is passed', () => {
-    expect(formVisibleReducer(false,{type: 'TOGGLE_FORM'})).toEqual(true);
+    expect(formVisibleReducer(false,a.toggleForm())).toEqual(true);
   });
 });
