@@ -40,8 +40,25 @@ describe('tap-room actions', ()=> {
   });
 
   test('selectKeg should create SELECT_KEG action', () => {
-    expect(a.selectKeg()).toEqual({
-      type: c.SELECT_KEG
+    const keg = {
+      name: "test",
+      brand: "test",
+      alcoholContent: "test",
+      price: "test",
+      flavor: "test",
+      description: "test",
+      quantity: 24,
+      id: 1
+    }
+    expect(a.selectKeg(keg)).toEqual({
+      type: c.SELECT_KEG,
+      keg
+    });
+  });
+
+  test('deselectKeg should create DESELECT_KEG action', () => {
+    expect(a.deselectKeg()).toEqual({
+      type: c.DESELECT_KEG
     });
   });
 });
