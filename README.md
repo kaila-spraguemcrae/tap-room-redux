@@ -28,6 +28,7 @@ This is an independent project for Epicodus week 16 as part of the "React Fundam
 This project uses the following technologies:
 
 - React
+- Redux
 - JSX
 - JavaScript ES6
 - Bootstrap 5
@@ -75,6 +76,7 @@ This project uses the following technologies:
 
 - **Node.js :** You can check if you have Node.js by running `node -v` in the command line. If you do not have Node.js please find more information and download [here](https://nodejs.org/en/)
 * you can also install node through Homebrew by running `brew install node` in the command line.
+- **Jest :** If your testing does not run, you may need to install Jest, you can do this by running `npm install jest@24.9.0 --save-dev` in the command line.
 - **Prefered Code Editor**
 
 ### ⚙️ Clone or Download
@@ -94,6 +96,10 @@ Go to my GitHub repository here, [https://guthub.com/kaila.spraguemcrae/tap-room
 #### `npm install` 
 
 This insures you have all of the necessary files to run the program.
+
+#### `npm test`
+
+This allows you to test the applications action creators and reducers.
 
 #### `npm start`
 
