@@ -36,7 +36,7 @@ function KegDetail(props){
             <button className="btn btn-secondary col m-1" hidden={keg.quantity===0} onClick={()=> onClickingBuy(keg.id)}>Buy</button>
 
             <input className="col m-1 ms-5" ref={numberInput} type='number' name='restock' placeholder='restock quantity'/>
-            <button className="btn btn-secondary m-1 col" onClick={()=> onClickingRestock(keg.id, numberInput.current.value)}>Restock</button>
+            <button className="btn btn-secondary m-1 col" onClick={()=> onClickingRestock(keg.id, parseInt(numberInput.current.value))}>Restock</button>
           </div>
 
           <div className="row">
