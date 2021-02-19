@@ -25,4 +25,11 @@ describe('tap-room actions', ()=> {
       id: 1
     });
   });
+
+  test('deleteKeg should create DELETE_KEG action', ()=>{
+    expect(a.deleteKeg(1)).toEqual({
+      type: c.DELETE_KEG,
+      id: 1
+    });
+  });
 });
