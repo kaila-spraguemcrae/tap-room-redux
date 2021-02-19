@@ -38,4 +38,10 @@ describe('tap-room actions', ()=> {
       type: c.TOGGLE_FORM
     });
   });
+
+  test('selectKeg should create SELECT_KEG action', () => {
+    expect(a.selectKeg()).toEqual({
+      type: c.SELECT_KEG
+    });
+  });
 });
