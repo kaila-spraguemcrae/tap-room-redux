@@ -64,7 +64,7 @@ This project uses the following technologies:
 
 | Date | Error | Handled | Solution |
 | :------------- | :------------- | :------------- | :------------- |
-| 02.12.2021 | cannot read propert 'id' of undefined | ❌ |  |
+| 02.12.2021 | cannot read propert 'id' of undefined | ✅ | typo in KegControl |
 
 -------------------
 

@@ -50,7 +50,7 @@ class KegControl extends React.Component {
     }))
     this.setState({
       masterKegList: newMasterKegList,
-      selectedKeg: null
+      selectedKeg: newMasterKegList.filter(keg => keg.id === id)[0]
     });
   }
 
@@ -61,7 +61,7 @@ class KegControl extends React.Component {
     }))
     this.setState({
       masterKegList: newMasterKegList,
-      selectedKeg: null
+      selectedKeg: newMasterKegList.filter(keg => keg.id === id)[0]
     });
   }
 
