@@ -1,5 +1,4 @@
 import rootReducer from '../../reducers/index';
-import * as c from '../../actions/ActionTypes';
 import * as a from '../../actions/index'
 import { createStore } from 'redux';
 import formVisibleReducer from '../../reducers/form-visible-reducer';
