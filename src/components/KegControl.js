@@ -54,9 +54,6 @@ class KegControl extends React.Component {
     const selectedKeg = this.props.masterKegList[id];
     const action2 = a.selectKeg(selectedKeg);
     dispatch(action2);
-    // this.setState({
-    //   selectedKeg: this.props.masterKegList[id]
-    // });
   }
 
   handleRestockKeg = (id, restockAmount) => {
@@ -65,9 +62,9 @@ class KegControl extends React.Component {
     thisKeg.quantity = thisKeg.quantity + restockAmount;
     const action = a.addKeg(thisKeg);
     dispatch(action);
-    this.setState({
-      selectedKeg: this.props.masterKegList[id]
-    });
+    const selectedKeg = this.props.masterKegList[id];
+    const action2 = a.selectKeg(selectedKeg);
+    dispatch(action2);
   }
 
   handleDeletingKeg = (id) => {
