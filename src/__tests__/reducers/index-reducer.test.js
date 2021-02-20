@@ -60,4 +60,9 @@ describe('rootReducer', () => {
     store.dispatch(action);
     expect(store.getState().selectedKeg).toEqual(selectedKegReducer(undefined, action))
   });
+  test('check that DESLECT_KEG action works for selectedKegReducer and root reducer', ()=>{
+    const action = a.deselectKeg();
+    store.dispatch(action);
+    expect(store.getState().selectedKeg).toEqual(selectedKegReducer(undefined, action))
+  }); 
 });
