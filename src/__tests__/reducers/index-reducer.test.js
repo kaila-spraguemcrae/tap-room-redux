@@ -45,4 +45,19 @@ describe('rootReducer', () => {
     store.dispatch(action);
     expect(store.getState().formVisibleOnPage).toEqual(formVisibleReducer(undefined, action));
   });
+  test('Check that SELECT_KEG action works for selectedKegReducer and root reducer', () => {
+    const keg = {
+      name: "test",
+      brand: "test",
+      alcoholContent: "test",
+      price: "test",
+      flavor: "test",
+      description: "test",
+      quantity: 24,
+      id: 1
+    }
+    const action = a.selectKeg(keg);
+    store.dispatch(action);
+    expect(store.getState().selectedKeg).toEqual(selectedKegReducer(undefined, action))
+  });
 });
