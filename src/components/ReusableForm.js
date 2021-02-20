@@ -7,31 +7,31 @@ function ReusableForm(props) {
     <>
         <form onSubmit={props.formSubmissionHandler} >
           <div className="form-floating mb-3">
-            <input type="text" className="form-control" name="name" placeholder="Product Name" defaultValue="test" />
+            <input type="text" className="form-control" name="name" placeholder="Product Name" />
             <label htmlFor="name">Product Name</label>
           </div>
           <div className="form-floating mb-3">
-            <input type="text" className="form-control" name="brand" placeholder="Brand Name" defaultValue="test" />
+            <input type="text" className="form-control" name="brand" placeholder="Brand Name" />
             <label htmlFor="brand">Brand Name</label>
           </div>
           <div className="form-floating mb-3">
-            <input type="text" className="form-control" name="alcoholContent" placeholder="Alcohol Content" defaultValue="test" />
+            <input type="text" className="form-control" name="alcoholContent" placeholder="Alcohol Content" />
             <label htmlFor="Alcohol Content">Alcohol Content</label>
           </div>
           <div className="form-floating mb-3">
-            <input type="number" className="form-control" name="price" placeholder="Price" defaultValue="5" />
+            <input type="number" className="form-control" name="price" placeholder="Price" />
             <label htmlFor="price">Price</label>
           </div>
           <div className="form-floating mb-3">
-            <input type="text" className="form-control" name="flavor" placeholder="Flavor" defaultValue="test" />
+            <input type="text" className="form-control" name="flavor" placeholder="Flavor" />
             <label htmlFor="flavor">Flavor</label>
           </div>
           <div className="form-floating mb-3">
-            <textarea className="form-control" name="description" placeholder="Description" defaultValue="test" rows="5" />
+            <textarea className="form-control" name="description" placeholder="Description" rows="5" />
             <label htmlFor="description">Description</label>
           </div>
           <div className="form-floating mb-3">
-            <input type="number"className="form-control"  name="quantity" placeholder="Quantity in Pints" defaultValue="124" />
+            <input type="number"className="form-control"  name="quantity" placeholder="Quantity in Pints" />
             <label htmlFor="quantity">Quantity in Pints</label>
           </div>
           <div className="d-grid pb-2">
