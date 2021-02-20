@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function KegDetail(props){
   const { keg, onClickingDelete, onClickingBuy, onClickingRestock } = props;
-  let { stockMessage } = props;
+  let stockMessage;
   let numberInput = React.createRef();
 
   if(keg.quantity <= 0) {

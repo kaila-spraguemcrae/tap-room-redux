@@ -11,15 +11,16 @@ class KegControl extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      selectedKeg: null,
       editing: false
     };
   }
 
   handleClick = () => {
-    if(this.state.selectedKeg != null) {
+    if(this.props.selectedKeg != null) {
+      const {dispatch} = this.props;
+      const action = a.deselectKeg();
+      dispatch(action);
       this.setState({
-        selectedKeg: null,
         editing: false
       });
     } else {
@@ -38,8 +39,10 @@ class KegControl extends React.Component {
   }
 
   handleChangingSelectedKeg = (id) => {
+    const { dispatch } = this.props;
     const selectedKeg = this.props.masterKegList[id];
-    this.setState({selectedKeg: selectedKeg});
+    const action = a.selectKeg(selectedKeg);
+    dispatch(action);
   }
 
   handleBuyKeg = (id) => {
@@ -48,9 +51,12 @@ class KegControl extends React.Component {
     thisKeg.quantity = thisKeg.quantity - 1;
     const action = a.addKeg(thisKeg);
     dispatch(action);
-    this.setState({
-      selectedKeg: this.props.masterKegList[id]
-    });
+    const selectedKeg = this.props.masterKegList[id];
+    const action2 = a.selectKeg(selectedKeg);
+    dispatch(action2);
+    // this.setState({
+    //   selectedKeg: this.props.masterKegList[id]
+    // });
   }
 
   handleRestockKeg = (id, restockAmount) => {
@@ -68,9 +74,8 @@ class KegControl extends React.Component {
     const { dispatch } = this.props;
     const action = a.deleteKeg(id);
     dispatch(action);
-    this.setState({
-      selectedKeg: null
-    });
+    const action2 = a.deselectKeg();
+    dispatch(action2);
   }
 
   handleEditClick = () => {
@@ -81,9 +86,10 @@ class KegControl extends React.Component {
     const { dispatch } = this.props;
     const action = a.addKeg(kegToEdit);
     dispatch(action);
+    const action2 = a.deselectKeg();
+    dispatch(action2);
     this.setState({
       editing:false,
-      selectedKeg: null
     });
   }
 
@@ -93,13 +99,14 @@ class KegControl extends React.Component {
     if(this.state.editing){
       currentlyVisibleState = 
       <EditKegForm
-        keg = {this.state.selectedKeg}
+        keg = {this.props.selectedKeg}
         onEditKeg = {this.handleEditingKegInList} />
       buttonText="Return to List";
-    } else if(this.state.selectedKeg != null){
+    } else if(this.props.selectedKeg != null){
       currentlyVisibleState = 
       <KegDetail 
-        keg = {this.state.selectedKeg} onClickingBuy = {this.handleBuyKeg} 
+        keg = {this.props.selectedKeg} 
+        onClickingBuy = {this.handleBuyKeg} 
         onClickingRestock = {this.handleRestockKeg}
         onClickingDelete = {this.handleDeletingKeg}
         onClickingEdit = {this.handleEditClick} />
@@ -128,13 +135,15 @@ class KegControl extends React.Component {
 
 KegControl.propTypes = {
   masterKegList: PropTypes.object,
-  formVisibleOnPage: PropTypes.bool
+  formVisibleOnPage: PropTypes.bool,
+  selectedKeg: PropTypes.object
 }
 
 const mapStateToProps = state => {
   return {
     masterKegList: state.masterKegList,
-    formVisibleOnPage: state.formVisibleOnPage
+    formVisibleOnPage: state.formVisibleOnPage,
+    selectedKeg: state.selectedKeg
   }
 }
 
