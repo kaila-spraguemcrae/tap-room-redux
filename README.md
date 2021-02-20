@@ -21,6 +21,8 @@ This is a React with Redux application that allows the user to track kegs using 
 
 This is an independent project for Epicodus week 16 as part of the "React Fundamentals" coursework. 
 
+You can find the live site [here](https://kaila-spraguemcrae.github.io/tap-room-redux/)
+
 --------------------
 
 ## 🛠️ Technologies Used
